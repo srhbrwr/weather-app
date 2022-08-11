@@ -1,7 +1,10 @@
 body {
   font-family: "Cabin", sans-serif;
-  background: #f2f9f1;
-  color: #5c715e;
+  background: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+  color: #e46161;
+  border: 10px solid #e46161;
+  border-radius: 10% 10% 10% 10%;
+  margin: 20px;
 }
 
 h1,
@@ -26,21 +29,20 @@ h4 {
 
 .city {
   padding: 50px;
-  margin-left: 50px;
+  text-align: left;
 }
 
 .five-day {
-  margin-left: 50px;
   padding: 30px 5px;
   border-radius: 30% 30% 30% 30%;
 }
 
 .day {
-  border: 3px solid #5c715e;
+  border: 3px solid #e46161;
   border-radius: 20% 20% 20% 20%;
   padding: 20px;
 }
 
 #F, #C {
-  color: #5c715e;
+  color: #e46161;
 }
