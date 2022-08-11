@@ -1,8 +1,10 @@
 body {
   font-family: "Cabin", sans-serif;
   background: linear-gradient(to top, #feada6 0%, #f5efef 100%);
-  color: #e46161;
-  border: 10px solid #e46161;
+  background-image: url('clouds.jpg');
+  background-position: center;
+  color: #5585b5;
+  border: 10px solid #5585b5;
   border-radius: 10% 10% 10% 10%;
   margin: 20px;
 }
@@ -38,11 +40,11 @@ h4 {
 }
 
 .day {
-  border: 3px solid #e46161;
+  border: 3px solid #5585b5;
   border-radius: 20% 20% 20% 20%;
   padding: 20px;
 }
 
 #F, #C {
-  color: #e46161;
+  color: #5585b5;
 }
