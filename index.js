@@ -39,10 +39,18 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let currentTemperature = document.querySelector("#current-temp");
   let description = document.querySelector("#temp-description");
+  let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
   currentTemperature.innerHTML = `${temperature}`;
   description.innerHTML = response.data.weather[0].description;
   let h4 = document.querySelector("#current-city");
   h4.innerHTML = response.data.name;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
 }
 
 searchCity("Omaha");

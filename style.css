@@ -1,11 +1,13 @@
 body {
   font-family: "Cabin", sans-serif;
-  background: linear-gradient(to top, #feada6 0%, #f5efef 100%);
-  background-image: url('clouds.jpg');
   background-position: center;
   color: #005792;
   border-radius: 10% 10% 10% 10%;
   margin: 20px;
+}
+
+.container {
+    max-width: 700px;
 }
 
 h1,
@@ -25,23 +27,12 @@ h4 {
 
 .search-city {
   font-family: "Cabin" sans-serif;
-  margin-top: 35px;
+  margin-top: 20px auto;
 }
 
 .city {
   padding: 50px;
   text-align: left;
-}
-
-.five-day {
-  padding: 30px 5px;
-  border-radius: 30% 30% 30% 30%;
-}
-
-.day {
-  border: 3px solid #005792;
-  border-radius: 20% 20% 20% 20%;
-  padding: 20px;
 }
 
 #F, #C {
