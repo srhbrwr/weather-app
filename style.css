@@ -6,8 +6,10 @@ body {
   margin: 20px;
 }
 
-.container {
+.weather-app-page {
     max-width: 700px;
+    border: 1px solid #005792;
+    border-radius: 20px;
 }
 
 h1,
@@ -17,6 +19,10 @@ h3 {
 
 h4 {
   text-transform: capitalize;
+}
+
+#current-temp {
+    font-size: 50px;
 }
 
 .search-bar {
@@ -37,4 +43,5 @@ h4 {
 
 #F, #C {
   color: #005792;
+  text-decoration: none;
 }
