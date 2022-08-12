@@ -40,17 +40,19 @@ function showTemperature(response) {
   let currentTemperature = document.querySelector("#current-temp");
   let description = document.querySelector("#temp-description");
   let windElement = document.querySelector("#wind");
+  let humidElement = document.querySelector("#humidity");
   let iconElement = document.querySelector("#icon");
+  let h4 = document.querySelector("#current-city");
   currentTemperature.innerHTML = `${temperature}`;
   description.innerHTML = response.data.weather[0].description;
-  let h4 = document.querySelector("#current-city");
+  humidElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   h4.innerHTML = response.data.name;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
-
+  http: iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 searchCity("Omaha");
