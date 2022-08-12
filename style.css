@@ -45,3 +45,7 @@ h4 {
   color: #005792;
   text-decoration: none;
 }
+
+.weather-extra {
+  text-align: right;
+}
