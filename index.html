@@ -14,63 +14,71 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
-<div class="container weather-app-page">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col weather-app">
-                <div class="col search-city">
-                <div class="search-bar">
-                    <form id="search-form">
-                        <input type="text" id="search-city" placeholder="Search a city.." />
-                        <input type="submit" class="submit" value="🔎" />
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>    
-  <div class="row">
-    <div class="col-sm-5 col-md-6">
-    	<div class="city1">
-            <h1 id="current-city">Omaha</h1>
-            <h3></h3>
-            <img
-                src=""
-                alt="weather icon"
-                id="icon"
-            />
-        </div>    
-    </div>
-    <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
-    	<div class="city2">
-            <span class="weather-extra">
-            <div class="link">
-                <span id="current-temp"> </span>
-                <a href="" class="link_temp" id="C">°C</a>
-                <span>|</span>
-                <a href="" class="link_temp" id="F">°F</a>
-            </div>
-            <h4 id="temp-description"></h4>
-            <p>
-                Wind: 
-                <span id="wind"></span>
-            </p>
-            <p>
-                Humidity: 
-                <span id="humidity"></span>
-            </p>
-            </span>
-        </div>
-    </div>
-  </div>
+	<div class="container weather-app-page">
+    	<div class="container text-center">
+        	<div class="row">
+            	<div class="col weather-app">
+                	<div class="col search-city">
+                    	<div class="search-bar">
+                        	<form id="search-form">
+                            	<input type="text" id="search-city" placeholder="Search a city.." />
+                            	<input type="submit" class="submit" value="🔎" />
+                        	</form>
+                    	</div>    
+                	</div>
+            	</div>
+        	</div>
+    	</div>  
+    
+		<div class="weather-info">
+  			<div class="row">
+    			<div class="col-sm-5 col-md-6">
+    				<div class="city1">
+            			<h1 id="current-city">
+            			Omaha
+            			</h1>
+            			<h3>
+            				
+            			</h3>
+            			<div class="link">
+                			<span id="current-temp"> </span>
+                			<a href="" class="link_temp" id="C">°C</a>
+                			<span>|</span>
+                			<a href="" class="link_temp" id="F">°F</a>
+            			</div>
+        			</div>    
+    			</div>
+    		</div>
 
-    <div class="five-day" id="forecast"></div>
-</div>
+    		<div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+    			<div class="city2">
+            		<span class="weather-extra">
+            			<img
+                			src=""
+                			alt="weather icon"
+                			id="icon"
+            			/>
+            			<p id="temp-description"></p>
+            			<p>
+                		Wind: 
+                		<span id="wind"></span>
+                		<br>
+                		Humidity: 
+                		<span id="humidity"></span>
+            			</p>
+            		</span>
+        		</div>
+    		</div>
+  		</div>
 
-<small>
-    <a href="https://github.com/srhbrwr/weather-app">
-        Open-source code
-    </a>
-    <span>, by Sarah Brewer</span>
-</small>
+    	<div class="five-day" id="forecast"></div>
+
+		<small>
+    		<a href="https://github.com/srhbrwr/weather-app">
+        		Open-source code
+    		</a>
+    		<span>, by Sarah Brewer</span>
+		</small>
+	</div>
 <script src="index.js"></script>
 </body>

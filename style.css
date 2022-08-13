@@ -4,6 +4,7 @@ body {
   color: #005792;
   border-radius: 10% 10% 10% 10%;
   margin: 20px;
+  text-align: center;
 }
 
 .weather-app-page {
@@ -17,7 +18,7 @@ h3 {
   font-family: "Cabin", sans-serif;
 }
 
-h4 {
+p {
   text-transform: capitalize;
 }
 
@@ -36,9 +37,9 @@ h4 {
   margin-top: 20px auto;
 }
 
-.city1, .city2 {
-  padding: 50px;
+.weather-info {
   text-align: left;
+  padding: 20px;
 }
 
 #F, #C {
