@@ -49,3 +49,8 @@ h4 {
 .weather-extra {
   text-align: right;
 }
+
+.five-day {
+  text-align: center;
+  margin-bottom: 20px;
+}

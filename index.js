@@ -35,6 +35,37 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Sunday", "Monday", "Tuesday", "Wedneday", "Thursday"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"
+        />
+        <div class="weather-forecast-temperatures">
+          <span class="temperature-max"> 18° </span>
+          <span class="temperature-min"> 12° </span>
+        </div>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let currentTemperature = document.querySelector("#current-temp");
@@ -56,6 +87,7 @@ function showTemperature(response) {
 }
 
 searchCity("Omaha");
+displayForecast();
 
 // °C °F conversion
 
