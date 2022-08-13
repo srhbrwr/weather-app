@@ -36,7 +36,7 @@ h4 {
   margin-top: 20px auto;
 }
 
-.city {
+.city1, .city2 {
   padding: 50px;
   text-align: left;
 }
@@ -44,10 +44,6 @@ h4 {
 #F, #C {
   color: #005792;
   text-decoration: none;
-}
-
-.weather-extra {
-  text-align: right;
 }
 
 .five-day {
