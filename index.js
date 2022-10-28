@@ -83,14 +83,17 @@ function getForecast(coordinates) {
 }
 
 function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
+  let fahrenheitTemperature = Math.round(response.data.main.temp);
   let currentTemperature = document.querySelector("#current-temp");
   let description = document.querySelector("#temp-description");
   let windElement = document.querySelector("#wind");
   let humidElement = document.querySelector("#humidity");
   let iconElement = document.querySelector("#icon");
   let h4 = document.querySelector("#current-city");
-  currentTemperature.innerHTML = `${temperature}`;
+
+  fahrenheitTemperature = response.data.main.temp;
+
+  currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
   description.innerHTML = response.data.weather[0].description;
   humidElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -106,27 +109,3 @@ function showTemperature(response) {
 
 searchCity("Omaha");
 displayForecast();
-
-// °C °F conversion
-
-let temperature = document.querySelector("#current-temp");
-
-let cel = document.querySelector("#C");
-let fah = document.querySelector("#F");
-
-let celsius = 33;
-
-function C(temp) {
-  temp.preventDefault();
-
-  temperature.innerHTML = `${celsius}`;
-}
-
-function F(temp) {
-  temp.preventDefault();
-  let fahrenheit = (`${celsius}` * 9) / 5 + 32;
-  temperature.innerHTML = `${fahrenheit}`;
-}
-
-cel.addEventListener("click", C);
-fah.addEventListener("click", F);
